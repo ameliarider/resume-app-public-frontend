@@ -4,6 +4,8 @@ import { ResumesPage } from "./ResumesPage";
 import { Footer } from "./Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { ResumesShow } from "./ResumesShow";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
