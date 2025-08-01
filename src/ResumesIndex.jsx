@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 export function ResumesIndex({students}) {
-    const [currentStudent, setCurrentStudent] = useState({});
+    // const [currentStudent, setCurrentStudent] = useState({});
 
-    const handleShow = (student) => {
-    console.log("handleShow!");
-    setCurrentStudent(student);
-    }
+    // const handleShow = (student) => {
+    // console.log("handleShow!");
+    // setCurrentStudent(student);
+    // }
 
   return (
     <div>

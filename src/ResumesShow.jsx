@@ -1,4 +1,21 @@
-export function ResumesShow({student}) {
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+export function ResumesShow() {
+  const { id } = useParams();
+  const [student, setStudent] = useState(null);
+
+  useEffect(() => {
+    axios.get(`students/${id}.json`).then((response) => {
+      setStudent(response.data);
+    });
+  }, [id]);
+
+  if (!student) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
       <h1>More Information:</h1>
@@ -22,23 +39,6 @@ export function ResumesShow({student}) {
           <p>No Education Listed</p>
         )}
       </div>
-      <form>
-        <div>
-          LinkedIn Url: <input defaultValue={student.linkedIn_url}/>
-        </div>
-        <div>
-          Twitter Handle: <input defaultValue={student.twitter_handle}/>
-        </div>
-        <div>
-          Personal Blog/Website:<input defaultValue={student.personal_blog_website_url}/>
-        </div>
-        <div>
-          Resume Url:<input defaultValue={student.online_resume_url}/>
-        </div>
-        <div>
-          GitHub Url:<input defaultValue={student.github_url}/>
-        </div>
-      </form>
     </div>
   )
 }

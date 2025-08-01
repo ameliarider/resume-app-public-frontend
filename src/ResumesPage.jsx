@@ -6,7 +6,7 @@ import {ResumesShow} from "./ResumesShow";
 export function ResumesPage() {
   const [students, setStudents] = useState([]);
   // const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
-  const [currentStudent, setCurrentStudent] = useState({});
+  // const [currentStudent, setCurrentStudent] = useState({});
 
   const handleIndex = () => {
     console.log("handleIndex");
@@ -16,10 +16,10 @@ export function ResumesPage() {
     });
   };
 
-  const handleShow = (student) => {
-    console.log("handleShow!");
-    setCurrentStudent(student);
-  }
+  // const handleShow = (student) => {
+  //   console.log("handleShow!");
+  //   setCurrentStudent(student);
+  // }
 
   useEffect(handleIndex, []);
 
