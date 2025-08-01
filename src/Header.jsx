@@ -1,8 +1,6 @@
 export function Header() {
   return (
     <header>
-      <nav>
-        <a href="/">Home</a> |
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Student Resumes</a>
@@ -23,7 +21,6 @@ export function Header() {
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
               </li>
-              {/* Add more links here if needed */}
             </ul>
           </div>
         </div>
