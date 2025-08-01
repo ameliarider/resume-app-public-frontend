@@ -8,6 +8,8 @@ export function ResumesShow() {
 
   useEffect(() => {
     axios.get(`students/${id}.json`).then((response) => {
+      console.log("Student data:", response.data);
+      console.log("Skills:", response.data.skills);
       setStudent(response.data);
     });
   }, [id]);
@@ -37,6 +39,49 @@ export function ResumesShow() {
           </ul>
         ):( 
           <p>No Education Listed</p>
+        )}
+      </div>
+      <div>
+        <strong>Experience:</strong>
+        {student.experiences?.length > 0 ?(
+          <ul>
+            {student.experiences.map((exp) => (
+              <li key={exp.id}>
+                {exp.job_title} - {exp.company_name} 
+                ({exp.start_date} to {exp.end_date})
+              </li>
+            ))}
+          </ul>
+        ):( 
+          <p>No Experience Listed</p>
+        )}
+      </div>
+      <div>
+        <strong>Skills:</strong>
+        {student.skills?.length > 0 ?(
+          <ul>
+            {student.skills.map((skill) => (
+              <li key={skill.id}>
+                {skill.name}
+              </li>
+            ))}
+          </ul>
+        ):( 
+          <p>No Skills Listed</p>
+        )}
+      </div>
+      <div>
+        <strong>Projects:</strong>
+        {student.projects?.length > 0 ?(
+          <ul>
+            {student.projects.map((project) => (
+              <li key={project.id}>
+                {project.name} - {project.description} 
+              </li>
+            ))}
+          </ul>
+        ):( 
+          <p>No Projects Listed</p>
         )}
       </div>
     </div>

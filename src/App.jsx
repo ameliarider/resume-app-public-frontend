@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { ResumesShow } from "./ResumesShow";
 
+
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
