@@ -62,7 +62,7 @@ export function ResumesShow() {
           <ul>
             {student.skills.map((skill) => (
               <li key={skill.id}>
-                {skill.name}
+                {skill.skill_name}
               </li>
             ))}
           </ul>
