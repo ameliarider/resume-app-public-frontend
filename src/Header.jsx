@@ -1,6 +1,8 @@
 export function Header() {
   return (
     <header>
+      <nav>
+        <a href="/">Home</a> |
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Student Resumes</a>
