@@ -14,7 +14,7 @@ export function ResumesIndex({students}) {
       <h1>All Students ({students.length})</h1>
       {students.map((student) => 
       <div key={student.id}>
-        <img src={student.photo}></img>
+        <img src="https://media.istockphoto.com/id/1469197622/vector/default-avatar-female-profile-user-profile-icon-profile-picture-portrait-symbol-user-member.jpg?s=612x612&w=0&k=20&c=0W8IMIJcp5sixzLYjoAHRnXqwX6GyTVOCnLBzkqgx_Q="></img>
         <h3>Full Name: {student.first_name} {student.last_name} </h3>
         <p>Email: {student.email}</p>
         <p>Phone Number: {student.phone_number}</p>
